@@ -1,0 +1,20 @@
+trn_vid_path = '/home/yangshuang/luomingshuang/GRID_6k_train_val_align/train'
+val_vid_path = '/home/yangshuang/luomingshuang/GRID_6k_train_val_align/val'
+anno_path = '/home/yangshuang/luomingshuang/GRID_6k_train_val_align/align'
+vid_pad = 75
+txt_pad = 10
+max_epoch = 1000
+lr = 5e-5
+num_workers = 4
+display = 10
+test_iter = 1000
+img_padding = 75
+text_padding = 10
+teacher_forcing_ratio = 0.01
+save_dir = 'weights2'
+mode = 'backendGRU'
+if('finetune' in mode):
+    batch_size = 64
+else:
+    batch_size = 16
+weights = 'iteration_13000_epoch_7_wer_0.11948019177390866_layer-2.pt'
